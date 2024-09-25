@@ -1,0 +1,22 @@
+{
+  "name": "typescript_project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "Nik Gladkov",
+  "license": "ISC",
+  "description": "TypeScript MileStone Project: Cargo Tracking Application",
+  "dependencies": {
+    "@types/google.maps": "^3.58.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.2",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.2"
+  }
+}
