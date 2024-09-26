@@ -24,7 +24,7 @@ Simple script for a page to add tasks to a list, mark them as done, and remove t
 Basic web application running inside a browser. The app randomly generates a name, track ID, and coordinates for the cargo and destination point using @faker-js/faker. A Google Map widget is implemented on the page, with markers showing the cargo location and destination point.
 
 [typescript_project/src](https://github.com/nikgladkov/myCV/tree/main/typescript_project/src)</br>
-[demo](https://github.com/nikgladkov/myCV/blob/main/typescript_project/ts_index.html)
+[demo](https://nikgladkov.github.io/myCV/typescript_project/ts_index.html)
 
 ## My Certifications and Completed Courses
 - ISTQB® Foundation Level Certification [link](https://media.licdn.com/dms/image/v2/D4D2DAQGi9GP8nQwzUQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1718185620817?e=1727956800&v=beta&t=BpGfoOpogoP48xg37C0vtWjyxZ72gJModzJhjzBIstA)
