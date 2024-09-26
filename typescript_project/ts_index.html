@@ -3,20 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../src/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../src/style.css">
+    <link rel="icon" href="../src/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../src/style.css" />
     <link rel="stylesheet" href="./src/cargo.css" />
     <title>TypeScript MileStone Project: Cargo Tracking Application</title>
-    <script
-      async
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdkqcKt6ajkdbcAfyfKE5Udus6WMSrA1Q&callback=console.debug&libraries=maps,marker&v=beta"
-    ></script>
-    <script async src="./dist/bundle.js"></script>
   </head>
 
   <body>
     <header>
-      <h1><a href="https://github.com/nikgladkov/CV_rep">Nikolai Gladkov</a></h1>
+      <h1>
+        <a href="https://github.com/nikgladkov/CV_rep">Nikolai Gladkov</a>
+      </h1>
       <h2>Cargo Web App</h2>
     </header>
 
@@ -25,8 +22,13 @@
     <section class="bubble"><div id="dest-info"></div></section>
 
     <section class="bubble"><div id="cargo-info"></div></section>
-    
+
     <button id="refresh-btn" class="button round-control">Refresh</button>
 
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdkqcKt6ajkdbcAfyfKE5Udus6WMSrA1Q&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+    <script defer src="./dist/bundle.js"></script>
   </body>
 </html>
