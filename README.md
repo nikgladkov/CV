@@ -17,7 +17,7 @@ I am currently developing my skills in JavaScript, TypeScript, and Cypress.
 Simple script for a page to add tasks to a list, mark them as done, and remove them. No server-side functionality. Tasks are saved in a JavaScript array.
 
 [js_project/src/to-do-list.js](https://github.com/nikgladkov/myCV/blob/main/js_project/src/to-do-list.js)</br>
-[demo](https://github.com/nikgladkov/myCV/blob/main/js_project/js-to-do-list.html)
+[demo](https://nikgladkov.github.io/myCV/js_project/js-to-do-list.html)
 
 ### Cargo Map Web App on TypeScript
 
