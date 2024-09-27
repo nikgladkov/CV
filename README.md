@@ -1,5 +1,5 @@
-# Nikolai Gladkov
-**QA Engineer. Manual, Automation Testing.**
+
+# QA Engineer. Manual, Automation Testing
 
 Hello world! 👋 
 
