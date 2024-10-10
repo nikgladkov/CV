@@ -1,0 +1,21 @@
+{
+  "name": "cypress-project",
+  "version": "1.0.0",
+  "description": "Cypress MileStone Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nik Gladkov",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^6.0.2",
+    "cypress": "^13.15.0",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.1",
+    "ts-loader": "latest"
+  }
+}
