@@ -1,6 +1,11 @@
 /// <reference types="cypress"/>
 import { Given, Then, When } from "@badeball/cypress-cucumber-preprocessor";
 
+//global common
+//import { PageInTest } from "../../support/common_classes/PageInTest";
+//import { greet } from "../../support/common_functions/commonFunctions";
+//const page = new PageInTest();
+
 const baseUrl = "https://www.webdriveruniversity.com/";
 
 Given(/^I navigate to the WebdriverUniversity homepage$/, () => {
