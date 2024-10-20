@@ -1,6 +1,6 @@
-import {defineConfig} from "cypress";
+import { defineConfig } from "cypress";
 import webpack from "@cypress/webpack-preprocessor";
-import {addCucumberPreprocessorPlugin} from "@badeball/cypress-cucumber-preprocessor";
+import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-preprocessor";
 
 async function setupNodeEvents(
   on: Cypress.PluginEvents,
@@ -54,6 +54,7 @@ export default defineConfig({
     viewportHeight: 1200,
     chromeWebSecurity: false,
     defaultCommandTimeout: 15000,
-    retries: 2,
+    retries: 0,
+    baseUrl: "https://www.webdriveruniversity.com/",
   },
 });
