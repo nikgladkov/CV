@@ -12,40 +12,40 @@ const mainPageInTest = new MainPageInTest();
 const contactPageInTest = new ContactPageInTest();
 const contactUsThankYouPageInTest = new ContactUsThankYouPageInTest();
 
-Given('I navigate to the Webdriver University homepage', () => {
+Given("I navigate to the Webdriver University homepage", () => {
   cy.visit("/");
 });
 
-When('I click on the Contact Us button', () => {
+When("I click on the Contact Us button", () => {
   cy.get(mainPageInTest.contactUsLink).invoke("removeAttr", "target").click();
 });
 
-When('I type a first name', () => {
+When("I type a first name", () => {
   cy.get(contactPageInTest.firstNameInput).type("Michael");
 });
 
-When('I type a last name', () => {
+When("I type a last name", () => {
   cy.get(contactPageInTest.lastNameInput).type("Scott");
 });
 
-When('I enter an email', () => {
+When("I enter an email", () => {
   cy.get(contactPageInTest.emailInput).type(
     "michael_scott65@dundermifflin.com"
   );
 });
 
-When('I add a Comment', () => {
+When("I add a Comment", () => {
   cy.get(contactPageInTest.commentsInput).type(
     "You miss 100% of the shots you dont take. - Wayne Gretzky” - Michael Scott1"
   );
 });
 
-When('I click on the Submit button', () => {
+When("I click on the Submit button", () => {
   cy.get(contactPageInTest.submitButton).click();
 });
 
 Then(
-  'I should be presented with successful contact us submission message',
+  "I should be presented with successful contact us submission message",
   () => {
     cy.get(contactUsThankYouPageInTest.successTitle).should(
       "have.text",
@@ -55,27 +55,56 @@ Then(
 );
 
 Then(
-  'I should be presented with UNsuccessful contact us submission message',
+  "I should be presented with UNsuccessful contact us submission message",
   () => {
     cy.get("body").contains("Error: Invalid email address");
   }
 );
 
-When('I type a specific first name {string}', (firstName: string) => {
+When("I type a specific first name {string}", (firstName: string) => {
   cy.get(contactPageInTest.firstNameInput).type(firstName);
 });
 
-When('I type a specific last name {string}', (lastName: string) => {
+When("I type a specific last name {string}", (lastName: string) => {
   cy.get(contactPageInTest.lastNameInput).type(lastName);
 });
 
-When('I type a specific email {string}', (email: string) => {
+When("I type a specific email {string}", (email: string) => {
   cy.get(contactPageInTest.emailInput).type(email);
 });
 
 When(
-  'I type a specific word {string} and number {int} within the Comment',
+  "I type a specific word {string} and number {int} within the Comment",
   (word: string, number: number) => {
     cy.get(contactPageInTest.commentsInput).type(word + number);
   }
 );
+
+When(
+  "I type a first name {string} and a last name {string}",
+  (firstName: string, lastName: string) => {
+    cy.get(contactPageInTest.firstNameInput).type(firstName);
+    cy.get(contactPageInTest.lastNameInput).type(lastName);
+  }
+);
+
+When(
+  "I type an {string} and a comment {string}",
+  (emailAddress: string, comment: string) => {
+    cy.get(contactPageInTest.emailInput).type(emailAddress);
+    cy.get(contactPageInTest.commentsInput).type(comment);
+  }
+);
+
+Then("I should be presented with header text {string}", (message: string) => {
+  //to do https://www.lambdatest.com/learning-hub/exception-handling-in-cypress#exception
+  // try {
+  //   cy.get(contactUsThankYouPageInTest.successTitle).then(($el) => {
+  //     const el = $el.text();
+
+  //     if (el) {
+  //       console.log("title");
+  //     }
+  //   });
+  // } catch (AssertionError) {}
+});
