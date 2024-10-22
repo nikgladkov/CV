@@ -6,11 +6,13 @@ import {
   MainPageInTest,
   ContactPageInTest,
   ContactUsThankYouPageInTest,
+  ContactFormHandlerPageInTest,
 } from "../../support/common_classes/PageInTest";
 
 const mainPageInTest = new MainPageInTest();
 const contactPageInTest = new ContactPageInTest();
 const contactUsThankYouPageInTest = new ContactUsThankYouPageInTest();
+const contactFormHandlerPageInTest = new ContactFormHandlerPageInTest();
 
 Given("I navigate to the Webdriver University homepage", () => {
   cy.visit("/");
@@ -57,7 +59,9 @@ Then(
 Then(
   "I should be presented with UNsuccessful contact us submission message",
   () => {
-    cy.get("body").contains("Error: Invalid email address");
+    cy.get(contactFormHandlerPageInTest.errorMessage).contains(
+      contactFormHandlerPageInTest.errorMessageText
+    );
   }
 );
 
@@ -97,14 +101,18 @@ When(
 );
 
 Then("I should be presented with header text {string}", (message: string) => {
-  //to do https://www.lambdatest.com/learning-hub/exception-handling-in-cypress#exception
-  // try {
-  //   cy.get(contactUsThankYouPageInTest.successTitle).then(($el) => {
-  //     const el = $el.text();
+  cy.title().then(($curTitle) => {
+    const curTitle = $curTitle;
 
-  //     if (el) {
-  //       console.log("title");
-  //     }
-  //   });
-  // } catch (AssertionError) {}
+    if (curTitle === contactFormHandlerPageInTest.title) {
+      cy.get(contactFormHandlerPageInTest.errorMessage).contains(
+        contactFormHandlerPageInTest.errorMessageText
+      );
+    } else {
+      cy.get(contactUsThankYouPageInTest.successTitle).should(
+        "have.text",
+        message
+      );
+    }
+  });
 });

@@ -2,6 +2,7 @@
 export class PageInTest {
   pageName: string | undefined;
   url: string | undefined;
+  title: string | undefined;
 }
 
 export class MainPageInTest extends PageInTest {
@@ -48,5 +49,19 @@ export class ContactUsThankYouPageInTest extends PageInTest {
     this.url = "/Contact-Us/contact-form-thank-you.html";
     this.successTitle = "h1";
     this.successTitleExpectedText = "Thank You for your Message!";
+  }
+}
+
+export class ContactFormHandlerPageInTest extends PageInTest {
+  errorMessage: string;
+  errorMessageText: string;
+
+  constructor() {
+    super();
+    this.pageName = "Contact form handler";
+    this.title = "Contact form handler";
+    this.url = "/Contact-Us/contact_us.php";
+    this.errorMessage = "body";
+    this.errorMessageText = "Error: Invalid email address";
   }
 }
