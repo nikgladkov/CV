@@ -7,16 +7,12 @@ import {
   ContactPageInTest,
   ContactUsThankYouPageInTest,
   ContactFormHandlerPageInTest,
-} from "../../support/common_classes/PageInTest";
+} from "../common_classes/PageInTest";
 
 const mainPageInTest = new MainPageInTest();
 const contactPageInTest = new ContactPageInTest();
 const contactUsThankYouPageInTest = new ContactUsThankYouPageInTest();
 const contactFormHandlerPageInTest = new ContactFormHandlerPageInTest();
-
-Given("I navigate to the Webdriver University homepage", () => {
-  cy.visit("/");
-});
 
 When("I click on the Contact Us button", () => {
   cy.get(mainPageInTest.contactUsLink).invoke("removeAttr", "target").click();

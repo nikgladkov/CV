@@ -7,12 +7,14 @@ export class PageInTest {
 
 export class MainPageInTest extends PageInTest {
   contactUsLink: string;
+  loginPortalLink: string;
 
   constructor() {
     super();
     this.pageName = "Main Page";
     this.url = "/index.html";
     this.contactUsLink = "#contact-us";
+    this.loginPortalLink = "a#login-portal";
   }
 }
 
@@ -63,5 +65,21 @@ export class ContactFormHandlerPageInTest extends PageInTest {
     this.url = "/Contact-Us/contact_us.php";
     this.errorMessage = "body";
     this.errorMessageText = "Error: Invalid email address";
+  }
+}
+
+export class LoginPortalPageInTest extends PageInTest {
+  userNameInput: string;
+  passwordInput: string;
+  submitButton: string;
+
+  constructor() {
+    super();
+    this.pageName = "Login page";
+    this.title = "WebDriver | Login Portal";
+    this.url = "/Login-Portal/index.html?";
+    this.userNameInput = "[placeholder='Username']";
+    this.passwordInput = "[placeholder='Password']";
+    this.submitButton = "button#login-button";
   }
 }
