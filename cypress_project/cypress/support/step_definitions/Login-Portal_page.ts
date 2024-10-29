@@ -15,7 +15,7 @@ When("I click on the Login Portal button", () => {
 });
 
 When("I type a specific user name {string}", (username: string) => {
-  cy.get(loginPortalPageInTest.passwordInput).type(username);
+  cy.get(loginPortalPageInTest.userNameInput).type(username);
 });
 
 When("I type a specific password {string}", (password: string) => {
@@ -23,10 +23,13 @@ When("I type a specific password {string}", (password: string) => {
 });
 
 When("I click on the Login button", () => {
+  cy.window().then((win) => {
+    cy.stub(win, "alert").as("windowAlert");
+  });
+
   cy.get(loginPortalPageInTest.submitButton).click();
 });
 
 Then("I should be presented with alert {string}", (message: string) => {
-  //to do
-  cy.on("window:alert", (alertText) => {expect(alertText).to.contain('cccc')});
+  cy.get("@windowAlert").should("be.calledWith", message);
 });

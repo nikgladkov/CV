@@ -9,7 +9,7 @@ Feature: WebdriveUniversity - Login Portal verification
         Then I should be presented with alert '<message>'
 
         Examples:
-            | username  | password      | message              |
-            | webdriver | 1webdriver123 | validation succeeded |
-            | webdriver | test          | 1validation failed   |
-            | test      | test          | 1validation failed   |
+            | username  | password     | message               |
+            | webdriver | webdriver123 | validation succeeded |
+            | webdriver | test         | validation failed    |
+            | test      | test         | validation failed    |
