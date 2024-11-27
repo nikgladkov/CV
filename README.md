@@ -11,6 +11,17 @@ Feel free to contact me: [linkedin.com/in/nik-gladkov-qa](https://www.linkedin.c
 I am currently developing my skills in JavaScript, TypeScript, and Cypress.
 
 ## My Milestone Projects
+
+### Test Suit automated via Cypress, Typescript and Cucumber
+
+Test Suit for the demo site https://www.webdriveruniversity.com/ .
+Covered scenarious
+Page objects [described]() as objects via typesscript classes.
+Reporting [implemented]().
+
+- [cypress_project/cypress](https://github.com/nikgladkov/CV/tree/main/cypress_project/cypress)
+- demo
+
 ### TO-DO List on JavaScript
 
 Simple script for a page to add tasks to a list, mark them as done, and remove them. No server-side functionality. Tasks are saved in a JavaScript array.
@@ -29,4 +40,4 @@ Basic web application running inside a browser. The app randomly generates a nam
 - ISTQB® Foundation Level Certification [link](https://media.licdn.com/dms/image/v2/D4D2DAQGi9GP8nQwzUQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1718185620817?e=1727956800&v=beta&t=BpGfoOpogoP48xg37C0vtWjyxZ72gJModzJhjzBIstA)
 - ISTQB® Advanced Level Test Automation Engineering Certification
 - Udemy Course: TypeScript: TypeScript & JS with Real JavaScript Projects [link](https://www.udemy.com/certificate/UC-0a6f6f51-7a3a-4123-ac9f-1bf0c05b883a/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com)
-- Udemy Course: Cypress with Cucumber BDD - Automation Testing Bootcamp
+- Udemy Course: Cypress with Cucumber BDD - Automation Testing Bootcamp [link](https://www.udemy.com/certificate/UC-3b2d3d9e-4fef-4cf7-a900-6f7f177132ea/)

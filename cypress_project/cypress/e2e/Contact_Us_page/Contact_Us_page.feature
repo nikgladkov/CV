@@ -38,6 +38,6 @@ Feature: WebdriverUniversity - Contact Us Page
 
         Examples:
             | firstName | lastName | emailAddress | comment          | message                      |
-            | Test      | Test     | test@te.st   | Valid Scenario   | Thank You for your Message!  |
-            | Test2     | Test2    | test2@te.st  | Valid Scenario   | Thank You for your Message!  |
-            | Test3     | Test3    | invalidEmail | InValid Scenario | Error: Invalid email address |
+            | Test      | Test     | test@te.st   | Valid Scenario   | Thank You for your Message!1  |
+            | Test2     | Test2    | test2@te.st  | Valid Scenario   | Thank You for your Message!2  |
+            | Test3     | Test3    | invalidEmail | InValid Scenario | Er3ror: Inva3lid email ad3dress3 |
