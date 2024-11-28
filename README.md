@@ -18,7 +18,7 @@ Test Suit for the demo site [webdriveruniversity.com](https://www.webdriverunive
 
 Test cases described with Gherkin. Realized with Cucumber.
 Page objects [described](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/common_classes/PageInTest.ts) as objects via typesscript classes.
-Reporting implemented via multiple-cucumber-html-reporter.
+Reporting implemented using @multiple-cucumber-html-reporter.
 
 ### TO-DO List on JavaScript
 
