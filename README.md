@@ -16,13 +16,9 @@ Test Suit for the demo site [webdriveruniversity.com](https://www.webdriverunive
 1. [Contact Us feature](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/e2e/Contact_Us_page/Contact_Us_page.feature)
 2. [Login feature](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/e2e/Login-Portal_page/Login-Portal_page.feature)
 
-
 Test cases described with Gherkin. Realized with Cucumber.
 Page objects [described](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/common_classes/PageInTest.ts) as objects via typesscript classes.
-Reporting [implemented](https://github.com/nikgladkov/CV/tree/main/cypress_project/cypress/reports) via multiple-cucumber-html-reporter.
-
-- [cypress_project/cypress](https://github.com/nikgladkov/CV/tree/main/cypress_project/cypress)
-- demo
+Reporting implemented via multiple-cucumber-html-reporter.
 
 ### TO-DO List on JavaScript
 
