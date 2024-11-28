@@ -28,4 +28,4 @@ jobs:
         run: |
           ls
           cd cypress_project
-          npm npm run full-regression-headless-chrome --config-file cypress_project/cypress.config.ts
+          npm run full-regression-headless-chrome
