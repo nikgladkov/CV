@@ -32,11 +32,13 @@ jobs:
       - name: Generate HTML Report
         run: |
           cd cypress_project
-          mkdir -p reports_github
           node github-report.js
+
+      - name: Debug generated report html
+        run: ls -R cypress_project/cypress/reports/html-report
 
       - name: Upload HTML Report
         uses: actions/upload-artifact@v3
         with:
           name: cucumber-html-report
-          path: /reports_github/
+          path: cypress_project/cypress/reports/html-report
