@@ -26,10 +26,12 @@ jobs:
 
       - name: Run Cypress tests
         run: |
+          cd cypress_project
           npm run full-regression-headless-chrome
           
       - name: Generate HTML Report
         run: |
+          cd cypress_project
           node github-report.js
 
       - name: Upload HTML Report
