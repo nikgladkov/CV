@@ -32,8 +32,7 @@ jobs:
       - name: Generate HTML Report
         run: |
           cd cypress_project
-          mkdir -p reports_github/cucumber-json
-          ls -R reports_github/cucumber-json
+          mkdir -p reports_github
           node github-report.js
 
       - name: Upload HTML Report
