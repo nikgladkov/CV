@@ -19,12 +19,9 @@ jobs:
         with:
           node-version: 18
 
-      - name: Open project main folder
-        run: |
-          cd cypress_project
-
       - name: Install dependencies
         run: |
+          cd cypress_project
           npm install
 
       - name: Run Cypress tests
