@@ -13,8 +13,8 @@ I am opened for new job opportunities in the QA/testing field. Feel free to cont
 ### Automated tests implemented with Cypress, Typescript, Cucumber
 
 Test Suit for the demo site [webdriveruniversity.com](https://www.webdriveruniversity.com/).
-1. [Contact Us feature](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/e2e/Contact_Us_page/Contact_Us_page.feature), [Step defenitions](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/step_definitions/Contact_Us_page.ts)
-2. [Login feature](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/e2e/Login-Portal_page/Login-Portal_page.feature), [Step defenitions](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/step_definitions/Login-Portal_page.ts)
+1. Contact Us page - [feature](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/e2e/Contact_Us_page/Contact_Us_page.feature), [step defenitions](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/step_definitions/Contact_Us_page.ts)
+2. Login Portal page - [feature](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/e2e/Login-Portal_page/Login-Portal_page.feature), [step defenitions](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/step_definitions/Login-Portal_page.ts)
 
 Test cases described with Gherkin. Realized with Cucumber.
 Page objects [described](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/common_classes/PageInTest.ts) as objects via typesscript classes.
