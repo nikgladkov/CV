@@ -19,13 +19,24 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Open project main folder
         run: |
           cd cypress_project
+
+      - name: Install dependencies
+        run: |
           npm install
 
       - name: Run Cypress tests
         run: |
-          ls
-          cd cypress_project
           npm run full-regression-headless-chrome
+          
+      - name: Generate HTML Report
+        run: |
+          node github-report.js
+
+      - name: Upload HTML Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: cucumber-html-report
+          path: /reports_github/
