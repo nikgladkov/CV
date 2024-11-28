@@ -5,19 +5,21 @@ Hello world! 👋
 
 This page is part of [my CV](https://docs.google.com/document/d/1bxHjkzotjIEDZwQybSp7udMX3wW_zbbdhgJpz75Ojgc/edit#heading=h.gjdgxs). I would greatly appreciate your consideration.
 
-Feel free to contact me: [linkedin.com/in/nik-gladkov-qa](https://www.linkedin.com/in/nik-gladkov-qa/?locale=en_US), 
+I am opened for new job opportunities in the QA/testing field. Feel free to contact me: [linkedin.com/in/nik-gladkov-qa](https://www.linkedin.com/in/nik-gladkov-qa/?locale=en_US), 
 [nikgladkovrs@gmail.com](mailto:nikgladkovrs@gmail.com)  
-
-I am currently developing my skills in JavaScript, TypeScript, and Cypress.
 
 ## My Milestone Projects
 
-### Test Suit automated via Cypress, Typescript and Cucumber
+### Automated tests implemented with Cypress, Typescript, Cucumber
 
-Test Suit for the demo site https://www.webdriveruniversity.com/ .
-Covered scenarious
-Page objects [described]() as objects via typesscript classes.
-Reporting [implemented]().
+Test Suit for the demo site [webdriveruniversity.com](https://www.webdriveruniversity.com/).
+1. [Contact Us feature](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/e2e/Contact_Us_page/Contact_Us_page.feature)
+2. [Login feature](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/e2e/Login-Portal_page/Login-Portal_page.feature)
+
+
+Test cases described with Gherkin. Realized with Cucumber.
+Page objects [described](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/common_classes/PageInTest.ts) as objects via typesscript classes.
+Reporting [implemented](https://github.com/nikgladkov/CV/tree/main/cypress_project/cypress/reports) via multiple-cucumber-html-reporter.
 
 - [cypress_project/cypress](https://github.com/nikgladkov/CV/tree/main/cypress_project/cypress)
 - demo

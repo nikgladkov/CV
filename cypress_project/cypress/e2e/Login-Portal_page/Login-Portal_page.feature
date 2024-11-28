@@ -1,5 +1,6 @@
 @login @regression
 Feature: WebdriveUniversity - Login Portal verification
+
     @smoke
     Scenario Outline: Login Password Validation
         Given I navigate to the Webdriver University homepage

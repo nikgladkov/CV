@@ -4,10 +4,8 @@
   "description": "Cypress MileStone Project",
   "main": "cypress/e2e/Contact_Us_page/Contact_Us.ts",
   "scripts": {
-    "full-regression-headed-chrome": "cypress run --headed --browser chrome --spec '../cypress_project/cypress/e2e/*/*.feature'",
-    "full-regression-headless-chrome": "cypress run --browser chrome --spec '../cypress_project/cypress/e2e/*/*.feature'",
-    "contact-us-tests-headless-firefox": "node test.js; cypress run --browser firefox --spec \"../cypress_project/cypress/e2e/*/Contact_Us_page.feature\"; node cucumber-html-report.js",
-    "smoke-pack-headed": "cypress run -e TAGS=\"@smoke\" --headless; node cucumber-html-report.js"
+    "full-regression-headless-chrome": "cypress run -e TAGS=\"@regression\" --headless; node cucumber-html-report.js",
+    "smoke-pack-headless": "cypress run -e TAGS=\"@smoke\" --headless; node cucumber-html-report.js"
   },
   "author": "Nik Gladkov",
   "license": "ISC",
