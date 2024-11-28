@@ -19,10 +19,8 @@ jobs:
         with:
           node-version: 18
 
-      # Установка зависимостей
       - name: Install dependencies
         run: npm install
 
-      # Запуск тестов
       - name: Run Cypress tests
         run: npm run full-regression-headless-chrome --config-file cypress_project/cypress.config.ts
