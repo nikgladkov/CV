@@ -26,13 +26,13 @@ Reporting implemented using @multiple-cucumber-html-reporter.
 
 Simple script for a page to add tasks to a list, mark them as done, and remove them. No server-side functionality. Tasks are saved in a JavaScript array.
 
-[code](https://github.com/nikgladkov/CV/blob/main/js_project/src/to-do-list.js), [demo](https://nikgladkov.github.io/CV/js_project/js-to-do-list.html)
+[code](https://github.com/nikgladkov/CV/blob/main/js_project/src/to-do-list.js), [demo page](https://nikgladkov.github.io/CV/js_project/js-to-do-list.html)
 
 ### Cargo Map Web App on TypeScript
 
 Basic web application running inside a browser. The app randomly generates a name, track ID, and coordinates for the cargo and destination point using @faker-js/faker. A Google Map widget is implemented on the page, with markers showing the cargo location and destination point.
 
-[code](https://github.com/nikgladkov/CV/tree/main/typescript_project/src),[demo](https://nikgladkov.github.io/CV/typescript_project/ts_index.html)
+[code](https://github.com/nikgladkov/CV/tree/main/typescript_project/src), [demo page](https://nikgladkov.github.io/CV/typescript_project/ts_index.html)
 
 ## My Certifications and Completed Courses
 - ISTQB® Foundation Level Certification [link](https://media.licdn.com/dms/image/v2/D4D2DAQGi9GP8nQwzUQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1718185620817?e=1727956800&v=beta&t=BpGfoOpogoP48xg37C0vtWjyxZ72gJModzJhjzBIstA)

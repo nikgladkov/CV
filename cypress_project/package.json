@@ -4,8 +4,8 @@
   "description": "Cypress MileStone Project",
   "main": "cypress/e2e/Contact_Us_page/Contact_Us.ts",
   "scripts": {
-    "full-regression-headless-chrome": "cypress run -e TAGS=\"@regression\" --headless; node cucumber-html-report.js",
-    "smoke-pack-headless": "cypress run -e TAGS=\"@smoke\" --headless; node cucumber-html-report.js"
+    "full-regression-headless-chrome": "cypress run -e TAGS=\"@regression\" --headless",
+    "smoke-pack-headless": "cypress run -e TAGS=\"@smoke\" --headless"
   },
   "author": "Nik Gladkov",
   "license": "ISC",
