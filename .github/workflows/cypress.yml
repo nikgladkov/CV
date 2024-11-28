@@ -25,4 +25,7 @@ jobs:
           npm install
 
       - name: Run Cypress tests
-        run: npm run full-regression-headless-chrome --config-file cypress_project/cypress.config.ts
+        run: |
+          ls
+          cd cypress_project
+          npm npm run full-regression-headless-chrome --config-file cypress_project/cypress.config.ts
