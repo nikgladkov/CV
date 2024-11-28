@@ -25,4 +25,4 @@ jobs:
 
       # Запуск тестов
       - name: Run Cypress tests
-        run: npm run full-regression-headless-chrome
+        run: npm run full-regression-headless-chrome --config-file cypress_project/cypress.config.ts
