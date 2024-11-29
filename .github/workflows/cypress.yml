@@ -1,10 +1,13 @@
-name: Run Cypress Tests
+name: Run Cypress Tests and Publish Report
 
 on:
   push:
     branches:
       - main
   pull_request:
+
+permissions:
+  contents: write
 
 jobs:
   cypress-run:
@@ -35,16 +38,16 @@ jobs:
           node github-report.js
 
       - name: Debug generated report html
-        run: ls -R cypress_project/cypress/reports/html-report
+        run: ls -R cypress_project/cypress/reports/html-report-github
 
       - name: Upload HTML Report
         uses: actions/upload-artifact@v3
         with:
           name: cucumber-html-report
-          path: cypress_project/cypress/reports/html-report
+          path: cypress_project/cypress/reports/html-report-github
 
       - name: Deploy report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: cypress_project/cypress/reports/html-report
+          publish_dir: cypress_project/cypress/reports/html-report-github
