@@ -47,22 +47,13 @@ jobs:
       
           report.generate({
             jsonDir: jsonDir,
-            reportPath: '../cypress_project/cypress/reports/cucumber-html/2/',
+            reportPath: '../cypress_project/cypress/reports/cucumber-html/',
           });
           console.log('HTML Report generated successfully!');
           "
-          ls -la ../cypress_project/cypress/reports/cucumber-json/
-          ls -la ../cypress_project/cypress/reports/cucumber-html/
-          ls -la ../cypress_project/cypress/reports/cucumber-html/2/
 
       - name: Upload HTML Report
         uses: actions/upload-artifact@v4
         with:
           name: cucumber-html-report
-          path: cypress_project/cypress/reports/cucumber-html/2/
-
-      - name: Deploy report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: cypress_project/cypress/reports/cucumber-html/
+          path: cypress_project/cypress/reports/cucumber-html/
