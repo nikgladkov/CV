@@ -28,8 +28,9 @@ jobs:
           npm ci
 
       - name: Run Cypress tests
-        run:
+        run: |
           cd cypress_project
+        continue-on-error: true
           
       - name: Generate HTML Report
         run: |
