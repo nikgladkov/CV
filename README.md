@@ -1,7 +1,7 @@
 
 # QA Engineer. Manual, Automation Testing
 
-Hello world! 👋 
+Hello world! 👋 .
 
 This page is part of [my CV](https://docs.google.com/document/d/1bxHjkzotjIEDZwQybSp7udMX3wW_zbbdhgJpz75Ojgc/edit#heading=h.gjdgxs). I would greatly appreciate your consideration.
 
