@@ -33,7 +33,7 @@ Basic web application running inside a browser. The app randomly generates a nam
 [code](https://github.com/nikgladkov/CV/tree/main/typescript_project/src), [demo page](https://nikgladkov.github.io/CV/typescript_project/ts_index.html)
 
 ## My Certifications and Completed Courses
-- ISTQB® Foundation Level Certification [link](https://media.licdn.com/dms/image/v2/D4D2DAQGi9GP8nQwzUQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1718185620817?e=1727956800&v=beta&t=BpGfoOpogoP48xg37C0vtWjyxZ72gJModzJhjzBIstA)
+- ISTQB® Foundation Level Certification
 - ISTQB® Advanced Level Test Automation Engineering Certification
 - Udemy Course: TypeScript: TypeScript & JS with Real JavaScript Projects [link](https://www.udemy.com/certificate/UC-0a6f6f51-7a3a-4123-ac9f-1bf0c05b883a/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com)
 - Udemy Course: Cypress with Cucumber BDD - Automation Testing Bootcamp [link](https://www.udemy.com/certificate/UC-3b2d3d9e-4fef-4cf7-a900-6f7f177132ea/)
