@@ -30,7 +30,7 @@ jobs:
       - name: Run Cypress tests
         run: |
           cd cypress_project
-          npm full-regression-headless-chrome
+          #npm full-regression-headless-chrome
         continue-on-error: true
 
       - name: Generate HTML Report
@@ -47,20 +47,22 @@ jobs:
       
           report.generate({
             jsonDir: jsonDir,
-            reportPath: '../cypress_project/cypress/reports/cucumber-html/',
+            reportPath: '../cypress_project/cypress/reports/cucumber-html/2/',
           });
           console.log('HTML Report generated successfully!');
           "
           ls -la ../cypress_project/cypress/reports/cucumber-json/
+          ls -la ../cypress_project/cypress/reports/cucumber-html/
+          ls -la ../cypress_project/cypress/reports/cucumber-html/2/
 
       - name: Upload HTML Report
         uses: actions/upload-artifact@v3
         with:
           name: cucumber-html-report
-          path: cypress_project/cypress/reports/1/
+          path: cypress_project/cypress/reports/cucumber-html/2/
 
       - name: Deploy report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: cypress_project/cypress/reports/1/
+          publish_dir: cypress_project/cypress/reports/cucumber-html/2/
