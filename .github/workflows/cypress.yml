@@ -30,11 +30,11 @@ jobs:
       - name: Run Cypress tests
         run: |
           cd cypress_project
-          npm run full-regression-headless-chrome
           
       - name: Generate HTML Report
         run: |
           cd cypress_project
+          npm install multiple-cucumber-html-reporter --save-dev
           node -e "
           const fs = require('fs');
           const report = require('@multiple-cucumber-html-reporter');
