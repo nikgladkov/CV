@@ -15,8 +15,8 @@ Feel free to contact me: [linkedin.com/in/nik-gladkov-qa](https://www.linkedin.c
 ### Automated tests implemented with Cypress, TypeScript, and Cucumber
 
 Test Suit for the demo site [webdriveruniversity.com](https://www.webdriveruniversity.com/). Test cases are described using Gherkin and implemented with Cucumber.
-- Contact Us page - [feature](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/e2e/Contact_Us_page/Contact_Us_page.feature), [step defenitions](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/step_definitions/Contact_Us_page.ts)
-- Login Portal page - [feature](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/e2e/Login-Portal_page/Login-Portal_page.feature), [step defenitions](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/step_definitions/Login-Portal_page.ts)
+- Contact Us page - [link](https://www.webdriveruniversity.com/Contact-Us/contactus.html), [.feature](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/e2e/Contact_Us_page/Contact_Us_page.feature), [steps defenitions](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/step_definitions/Contact_Us_page.ts)
+- Login Portal page - [link](https://www.webdriveruniversity.com/Login-Portal/index.html), [.feature](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/e2e/Login-Portal_page/Login-Portal_page.feature), [steps defenitions](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/step_definitions/Login-Portal_page.ts)
 - Page objects are defined using TypeScript classes - [PageInTest.ts](https://github.com/nikgladkov/CV/blob/main/cypress_project/cypress/support/common_classes/PageInTest.ts) 
 - Reporting is implemented using the @multiple-cucumber-html-reporter extension - [report page](https://nikgladkov.github.io/CV/cypress_project/cypress/reports/cucumber-html/index.html)
 - CI/CD deployment workflow is configured with GitHub Actions to run tests in headless mode and generate the test report
