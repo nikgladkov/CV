@@ -35,4 +35,4 @@ jobs:
       - name: List files in reports directory
         run: |
           cd cypress_project
-          ls -la /cypress/reports/cucumber-json/
+          ls -la ../cypress_project/cypress/reports/cucumber-json/
