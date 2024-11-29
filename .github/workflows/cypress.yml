@@ -35,7 +35,21 @@ jobs:
       - name: Generate HTML Report
         run: |
           cd cypress_project
-          node github-report.js
+          node -e "
+          const fs = require('fs');
+          const report = require('@multiple-cucumber-html-reporter');
+          const jsonDir = './cypress/reports/cucumber-json/';
+      
+          if (!fs.existsSync(jsonDir) || fs.readdirSync(jsonDir).length === 0) {
+            throw new Error(\`JSON files not found in '\${jsonDir}'. Ensure tests are run and results are generated.\`);
+          }
+      
+          report.generate({
+            jsonDir: jsonDir,
+            reportPath: './cypress/reports/cucumber-html/',
+          });
+          console.log('HTML Report generated successfully!');
+          "
 
       - name: Upload HTML Report
         uses: actions/upload-artifact@v3
