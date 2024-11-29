@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd cypress_project
-          npm install
+          npm ci
 
       - name: Run Cypress tests
         run: |
@@ -33,11 +33,10 @@ jobs:
           
       - name: Generate HTML Report
         run: |
-          cd cypress_project
           node -e "
           const fs = require('fs');
           const report = require('@multiple-cucumber-html-reporter');
-          const jsonDir = './cypress/reports/cucumber-json/';
+          const jsonDir = './cypress_project/cypress/reports/cucumber-json/';
       
           if (!fs.existsSync(jsonDir) || fs.readdirSync(jsonDir).length === 0) {
             throw new Error(\`JSON files not found in '\${jsonDir}'. Ensure tests are run and results are generated.\`);
@@ -45,7 +44,7 @@ jobs:
       
           report.generate({
             jsonDir: jsonDir,
-            reportPath: './cypress/reports/cucumber-html/',
+            reportPath: './cypress_project/cypress/reports/cucumber-html/',
           });
           console.log('HTML Report generated successfully!');
           "
