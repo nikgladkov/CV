@@ -15,10 +15,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: 18
 
@@ -33,7 +33,6 @@ jobs:
           npm full-regression-headless-chrome
         continue-on-error: true
 
- 
       - name: Generate HTML Report
         run: |
           cd cypress_project
@@ -55,13 +54,13 @@ jobs:
           ls -la ../cypress_project/cypress/reports/cucumber-json/
 
       - name: Upload HTML Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         with:
           name: cucumber-html-report
-          path: cypress_project/cypress/reports/cucumber-html/
+          path: cypress_project/cypress/reports/1/
 
       - name: Deploy report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v6
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: cypress_project/cypress/reports/cucumber-html/
+          publish_dir: cypress_project/cypress/reports/1/
