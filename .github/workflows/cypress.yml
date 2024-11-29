@@ -31,34 +31,8 @@ jobs:
         run: |
           cd cypress_project
         continue-on-error: true
-          
-      - name: Generate HTML Report
+
+      - name: List files in reports directory
         run: |
           cd cypress_project
-          node -e "
-          const fs = require('fs');
-          const report = require('multiple-cucumber-html-reporter');
-          const jsonDir = './cypress_project/cypress/reports/cucumber-json/';
-      
-          if (!fs.existsSync(jsonDir) || fs.readdirSync(jsonDir).length === 0) {
-            throw new Error(\`JSON files not found in '\${jsonDir}'. Ensure tests are run and results are generated.\`);
-          }
-      
-          report.generate({
-            jsonDir: jsonDir,
-            reportPath: './cypress_project/cypress/reports/cucumber-html/',
-          });
-          console.log('HTML Report generated successfully!');
-          "
-
-      - name: Upload HTML Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: cucumber-html-report
-          path: cypress_project/cypress/reports/cucumber-html/
-
-      - name: Deploy report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: cypress_project/cypress/reports/cucumber-html/
+          ls -la /cypress/reports/cucumber-json/
