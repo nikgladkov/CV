@@ -51,4 +51,4 @@ jobs:
           });
           console.log('HTML Report generated successfully!');
           "
-          ls -la ./cypress_project/cypress/reports/cucumber-json/
+          ls -la ../cypress_project/cypress/reports/cucumber-json/
