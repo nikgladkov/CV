@@ -30,6 +30,7 @@ jobs:
       - name: Run Cypress tests
         run: |
           cd cypress_project
+          npm full-regression-headless-chrome
         continue-on-error: true
 
  
