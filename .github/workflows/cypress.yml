@@ -1,10 +1,7 @@
-name: Run Cypress Tests and Publish Report
+name: 1 Test and Report
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,30 +12,31 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
       - name: Install dependencies
         run: |
           cd cypress_project
-          npm install
+          npm ci
 
       - name: Run Cypress tests
         run: |
           cd cypress_project
-          
+          npm full-regression-headless-chrome
+        continue-on-error: true
+
       - name: Generate HTML Report
         run: |
           cd cypress_project
-          npm install multiple-cucumber-html-reporter --save-dev
           node -e "
           const fs = require('fs');
-          const report = require('@multiple-cucumber-html-reporter');
-          const jsonDir = './cypress/reports/cucumber-json/';
+          const report = require('multiple-cucumber-html-reporter');
+          const jsonDir = '../cypress_project/cypress/reports/cucumber-json/';
       
           if (!fs.existsSync(jsonDir) || fs.readdirSync(jsonDir).length === 0) {
             throw new Error(\`JSON files not found in '\${jsonDir}'. Ensure tests are run and results are generated.\`);
@@ -46,19 +44,33 @@ jobs:
       
           report.generate({
             jsonDir: jsonDir,
-            reportPath: './cypress/reports/cucumber-html/',
+            reportPath: '../cypress_project/cypress/reports/cucumber-html/',
+            metadata:{
+                browser: {
+                    name: 'chrome',
+                    version: '60'
+                },
+                device: 'Local test machine',
+                platform: {
+                    name: 'ubuntu',
+                    version: '16.04'
+                }
+            }
           });
           console.log('HTML Report generated successfully!');
           "
 
       - name: Upload HTML Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cucumber-html-report
           path: cypress_project/cypress/reports/cucumber-html/
-
-      - name: Deploy report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: cypress_project/cypress/reports/cucumber-html/
+      
+      - name: Commit and Push Report
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          cd cypress_project
+          git add ./cypress/reports/cucumber-html/
+          git commit -m "Update HTML Report [skip ci]" || echo "No changes to commit"
+          git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} main
