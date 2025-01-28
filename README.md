@@ -12,6 +12,8 @@ Feel free to contact me: [linkedin.com/in/nik-gladkov-qa](https://www.linkedin.c
 
 ## My Milestone Projects
 
+https://github.com/nikgladkov/myCypresFramework
+
 ### Automated tests implemented with Cypress, Typescript, Cucumber
 
 Test Suit for the demo site [webdriveruniversity.com](https://www.webdriveruniversity.com/).
